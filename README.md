@@ -22,9 +22,14 @@ A deep learning-based sentiment analysis system that uses a Simple RNN (Recurren
 
 ## Requirements
 ```python
+tensorflow==2.15.0
+pandas
 numpy
-tensorflow
+scikit-learn
+tensorboard
+matplotlib
 streamlit
+scikeras
 ```
 
 
@@ -36,19 +41,30 @@ streamlit
 - **Batch Size**: 32
 - **Maximum Epochs**: 10
 
-## Usage
+## Setup and Installation
 
-1. Install dependencies:
+1. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the Streamlit application:
+3. Run the Streamlit application:
 ```bash
 streamlit run main.py
 ```
 
-3. Enter a movie review in the text area and click 'Classify' to get the sentiment prediction.
+## Usage
+
+1. Launch the Streamlit application using the command above
+2. Enter a movie review in the text area
+3. Click 'Classify' to get the sentiment prediction
+4. View the sentiment (Positive/Negative) and confidence score
 
 ## Model Prediction Output
 - **Sentiment**: Binary classification (Positive/Negative)
@@ -80,4 +96,15 @@ Built using Streamlit with:
 - Unknown words are handled with a special token
 - Sequence padding ensures consistent input dimensions
 - The model is saved in HDF5 format
+- Visualization support through matplotlib
+- Model metrics tracking available via TensorBoard
+
+## Development Tools
+- TensorFlow 2.15.0 for deep learning
+- Scikit-learn for preprocessing utilities
+- Pandas for data manipulation
+- TensorBoard for model monitoring
+- Matplotlib for visualization
+- Streamlit for web interface
+- SciKeras for scikit-learn API compatibility
 
